@@ -10,3 +10,29 @@
     transition: 400ms;
 
 }
+
+#modal .content {
+    color: white;
+    width: 420px;
+}
+
+#modal .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+
+#modal .header a {
+    background-image: url("../assets/x.svg");
+    width: 20px;
+    height: 20px;
+    display: flex;
+    font-size: 0.01px;
+}
+
+#modal .header h1 {
+    color: white;
+    line-height: 42px;
+    
+}
