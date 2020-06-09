@@ -4,7 +4,7 @@
   "description": "***Uma semana para acelerar sua evolução como dev e avançar para o próximo nível.***",
   "main": "src/server.js",
   "scripts": {
-    "start": "node src/server.js"
+    "start": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "homepage": "https://github.com/Andrechiapetta/nextLevelWeekStarter#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
