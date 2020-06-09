@@ -1,0 +1,23 @@
+{
+  "name": "nextLevelWeekStarter",
+  "version": "1.0.0",
+  "description": "***Uma semana para acelerar sua evolução como dev e avançar para o próximo nível.***",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andrechiapetta/nextLevelWeekStarter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andrechiapetta/nextLevelWeekStarter/issues"
+  },
+  "homepage": "https://github.com/Andrechiapetta/nextLevelWeekStarter#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
