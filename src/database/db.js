@@ -27,7 +27,7 @@ db.serialize(() => {
             items
         ) VALUES (?,?,?,?,?,?,?);
     `
-    db.run(query, [
+    const values = [
         "",
         "Colectoria",
         "Guilherme Gemballa, Jardim América",
@@ -35,5 +35,16 @@ db.serialize(() => {
         "Santa Catarina",
         "Rio do Sul",
         "Resíduos Eletronicos, Lâmpadas"
-    ])
+    ]
+
+    function afterInsertData() {
+        if(err) {
+            return console.log(err)
+        }
+        
+        console.log("Cadastrado com sucesso")
+        console.log(this)
+    }
+
+    db.run(query, values, afterInsertData)
 })
