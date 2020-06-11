@@ -27,5 +27,13 @@ db.serialize(() => {
             items
         ) VALUES (?,?,?,?,?,?,?);
     `
-    db.run()
+    db.run(query, [
+        "",
+        "Colectoria",
+        "Guilherme Gemballa, Jardim América",
+        "Número 260",
+        "Santa Catarina",
+        "Rio do Sul",
+        "Resíduos Eletronicos, Lâmpadas"
+    ])
 })
