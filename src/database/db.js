@@ -7,6 +7,7 @@ db.serialize(() => {
         CREATE TABLE IF NOT EXISTS places (
             id INTEGER PRIMARY KEY AUTOINCREMENT
             image TEXT,
+            name TEXT,
             address TEXT,
             address2 TEXT,
             state TEXT,
@@ -14,4 +15,17 @@ db.serialize(() => {
             items TEXT
         );
     `)
+    
+    const query = `
+        INSERT INTO places (
+            image,
+            name,
+            address,
+            address2,
+            state,
+            city,
+            items
+        ) VALUES (?,?,?,?,?,?,?);
+    `
+    db.run()
 })
