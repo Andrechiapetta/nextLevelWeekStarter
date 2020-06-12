@@ -47,4 +47,10 @@ db.serialize(() => {
     }
 
     db.run(query, values, afterInsertData)
+
+    db.all(`SELECT * FROM places`, function(err, rows) {
+        if(err) {
+            return console.log(err)
+        }
+    })
 })
