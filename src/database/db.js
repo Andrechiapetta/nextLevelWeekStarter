@@ -52,5 +52,7 @@ db.serialize(() => {
         if(err) {
             return console.log(err)
         }
+
+        console.log("Aqui estão seus registros: ")
     })
 })
