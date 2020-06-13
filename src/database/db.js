@@ -54,5 +54,9 @@ db.serialize(() => {
         }
 
         console.log("Aqui estão seus registros: ")
+        console.log(rows)
     })
+
+    db.run(`DELETE FROM places WHERE id = ?`, [1])
+
 })
