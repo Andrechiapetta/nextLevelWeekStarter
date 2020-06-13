@@ -57,6 +57,10 @@ db.serialize(() => {
         console.log(rows)
     })
 
-    db.run(`DELETE FROM places WHERE id = ?`, [1])
+    db.run(`DELETE FROM places WHERE id = ?`, [1], function(err) {
+        if(err) {
+            return console.log(err)
+        }
+    })
 
 })
