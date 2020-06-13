@@ -61,6 +61,8 @@ db.serialize(() => {
         if(err) {
             return console.log(err)
         }
+
+        console.log("Registro deletado com sucesso!")
     })
 
 })
