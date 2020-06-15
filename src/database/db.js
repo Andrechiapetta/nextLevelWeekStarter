@@ -48,14 +48,14 @@ db.serialize(() => {
 
     db.run(query, values, afterInsertData)
 
-    db.all(`SELECT name FROM places`, function(err, rows) {
-        if(err) {
-            return console.log(err)
-        }
+    //db.all(`SELECT name FROM places`, function(err, rows) {
+    //    if(err) {
+    //        return console.log(err)
+    //    }
 
-        console.log("Aqui estão seus registros: ")
-        console.log(rows)
-    })
+    //    console.log("Aqui estão seus registros: ")
+    //    console.log(rows)
+   // })
 
     //db.run(`DELETE FROM places WHERE id = ?`, [1], function(err) {
     //    if(err) {
