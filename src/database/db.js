@@ -46,7 +46,7 @@ db.serialize(() => {
         console.log(this)
     }
 
-    db.run(query, values, afterInsertData)
+    // db.run(query, values, afterInsertData)
 
     db.all(`SELECT name FROM places`, function(err, rows) {
         if(err) {
