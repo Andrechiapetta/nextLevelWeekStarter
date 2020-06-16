@@ -3,9 +3,9 @@ const sqlite3 = require("sqlite3").verbose()
 const db = new sqlite3.Database("./src/database/database.db")
 
 db.serialize(() => {
-    db.run(`
+    /*db.run(`
         CREATE TABLE IF NOT EXISTS places (
-            id INTEGER PRIMARY KEY AUTOINCREMENT
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
             image TEXT,
             name TEXT,
             address TEXT,
@@ -37,7 +37,7 @@ db.serialize(() => {
         "Resíduos Eletronicos, Lâmpadas"
     ]
 
-    function afterInsertData() {
+    function afterInsertData(err) {
         if(err) {
             return console.log(err)
         }
@@ -65,4 +65,4 @@ db.serialize(() => {
     //    console.log("Registro deletado com sucesso!")
     //})
 
-})
+}) */
