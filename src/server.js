@@ -30,7 +30,7 @@ server.get("/search", (req, res) => {
         console.log(rows)
     })
 
-    return res.render("search-results.html")
+    return res.render("search-results.html", {places: rows})
 })
 
 server.listen(3000)
