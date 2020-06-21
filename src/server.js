@@ -26,11 +26,9 @@ server.get("/search", (req, res) => {
             return console.log(err)
         }
 
-        console.log("Aqui estão seus registros: ")
-        console.log(rows)
+        return res.render("search-results.html", {places: rows})
     })
 
-    return res.render("search-results.html", {places: rows})
 })
 
 server.listen(3000)
