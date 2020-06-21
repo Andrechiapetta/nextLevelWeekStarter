@@ -21,12 +21,12 @@ server.get("/create-point", (req, res) => {
 
 server.get("/search", (req, res) => {
 
-    db.all(`SELECT name FROM places`, function(err, rows) {
+    db.all(`SELECT * FROM places`, function(err, rows) {
         if(err) {
             return console.log(err)
         }
 
-        return res.render("search-results.html", {places: rows})
+        return res.render("search-results.html", { places: rows})
     })
 
 })
