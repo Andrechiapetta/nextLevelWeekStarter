@@ -53,7 +53,7 @@ function afterInsertData(err) {
     
     console.log("Cadastrado com sucesso")
     console.log(this)
-    return res.render("create-point.html")
+    return res.render("create-point.html", {saved: true})
 }
 
 db.run(query, values, afterInsertData)
