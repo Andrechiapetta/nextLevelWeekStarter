@@ -112,6 +112,11 @@
 
         <button type="submit">Cadastrar ponto de coleta</button>
     </form>
+
+    {% if saved %}
+    {% endif %}
+
+    {%include "partials/point-created.html"%}
 {% endblock content %}
 
 {% block scripts %}
