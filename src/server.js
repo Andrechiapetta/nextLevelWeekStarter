@@ -16,6 +16,7 @@ server.get("/", (req, res) => {
 })
 
 server.get("/create-point", (req, res) => {
+    req.query
    return res.render("create-point.html")
 })
 
