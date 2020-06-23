@@ -5,6 +5,8 @@ const db = require("./database/db.js")
 
 server.use(express.static("public"))
 
+server.use(express.urlencoded({ extended: true }))
+
 const nunjucks = require("nunjucks")
 nunjucks.configure("src/views", {
     express: server,
@@ -17,7 +19,7 @@ server.get("/", (req, res) => {
 
 server.get("/create-point", (req, res) => {
 
-    console.log(req.query)
+    //console.log(req.query)
     return res.render("create-point.html")
 })
 
