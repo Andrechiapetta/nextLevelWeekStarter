@@ -48,7 +48,7 @@ const values = [
 
 function afterInsertData(err) {
     if(err) {
-        return console.log(err)
+        return res.send("Erro no cadastro!")
     }
     
     console.log("Cadastrado com sucesso")
