@@ -62,6 +62,12 @@ db.run(query, values, afterInsertData)
 
 server.get("/search", (req, res) => {
 
+    const search = req.query.search
+
+    if(search == "") {
+        return res.render("search-results.html", { total: 0})
+    }
+
     db.all(`SELECT * FROM places`, function(err, rows) {
         if(err) {
             return console.log(err)
