@@ -68,7 +68,7 @@ server.get("/search", (req, res) => {
         return res.render("search-results.html", { total: 0})
     }
 
-    db.all(`SELECT * FROM places`, function(err, rows) {
+    db.all(`SELECT * FROM places WHERE city = '${search}'`, function(err, rows) {
         if(err) {
             return console.log(err)
         }
